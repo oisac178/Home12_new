@@ -59,7 +59,7 @@ namespace Home12
         public Department SelectDepart
         {
             get { return selectDepart; }
-            set 
+            set
             {
                 selectDepart = value;
                 RaisePropertyChanged(nameof(SelectDepart));
