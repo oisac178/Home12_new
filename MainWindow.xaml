@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TreeView HorizontalAlignment="Left" Height="390" Margin="10,10,0,0" VerticalAlignment="Top" Width="345" ItemsSource="{Binding Departments}">
+        <TreeView HorizontalAlignment="Left" Height="390" Margin="10,10,0,0" VerticalAlignment="Top" Width="345" ItemsSource="{Binding Inner}">
             <e:Interaction.Behaviors>
                 <local:BindableSelectedItemBehavior SelectedItem="{Binding SelectDepart, Mode=TwoWay}" />
             </e:Interaction.Behaviors>
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Departments}">
-                    <TextBlock Text="{Binding Nаme}" />
+                <HierarchicalDataTemplate ItemsSource="{Binding Inner}">
+                    <TextBlock Text="{Binding Name}" />
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>

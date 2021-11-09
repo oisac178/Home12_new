@@ -13,7 +13,7 @@ namespace Home12
         public uint SalaryAll { get; set; }
         public uint SalaryHead { get; set; }
         public uint IDDept { get; set; }
-        public ObservableCollection<Department> Departments { get; set; } = new ObservableCollection<Department>();
+        public ObservableCollection<Department> Inner { get; set; } = new ObservableCollection<Department>();
         public ObservableCollection<Human> Employee { get; set; } = new ObservableCollection<Human>();
     }
 }

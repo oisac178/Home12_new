@@ -13,7 +13,7 @@ namespace Home12
 {
     public class MainWindowVM : ViewModelBase
     {
-        public ObservableCollection<Department> Departments { get; set; } = new ObservableCollection<Department>();
+        public ObservableCollection<Department> Inner { get; set; } = new ObservableCollection<Department>();
         private Department selectDepart;
 
         private RelayCommand addCommand;
@@ -30,14 +30,14 @@ namespace Home12
                     {
                         departament.Employee.Add(new Human("имя"+i, "фамилия"+i, "должность"+i, 1000));
                     }    
-                    if (!Departments.Any())
+                    if (!Inner.Any())
                         {
-                            Departments.Add(departament);
+                            Inner.Add(departament);
                         }
                     else
                         {
                             departament.Name = "{111555}";
-                            SelectDepart?.Departments.Add(departament);
+                            SelectDepart?.Inner.Add(departament);
                         }
                     }));
             }
@@ -50,7 +50,7 @@ namespace Home12
                     (delCommand = new RelayCommand(obj =>
                     {
                         Department departament = new Department();
-                        Departments.Remove(departament);
+                        Inner.Remove(departament);
                         SelectDepart = departament;
                     }));
             }
